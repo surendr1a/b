@@ -9,7 +9,8 @@ function App() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/users', { firstName, lastName });
+            // Update the URL to your backend's deployed URL
+            await axios.post('https://b-two-sooty.vercel.app/api/users', { firstName, lastName });
             alert('User saved successfully');
         } catch (error) {
             alert('Error saving user');
@@ -18,7 +19,8 @@ function App() {
 
     const handleFetch = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/users');
+            // Update the URL to your backend's deployed URL
+            const response = await axios.get('https://b-two-sooty.vercel.app/api/users');
             setUsers(response.data);
         } catch (error) {
             alert('Error fetching users');
