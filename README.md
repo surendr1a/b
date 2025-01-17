@@ -8,4 +8,4 @@
       <%= link_to 'Delete', task, method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
   <% end %>
-</ul>
+</ul> 
