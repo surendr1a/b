@@ -1,4 +1,14 @@
-<h1><%= @task.title %></h1>
-<p><%= @task.description %></p>
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back to Tasks', tasks_path %>
+<h1><%= action_name.capitalize %> Task</h1>
+<%= form_with model: @task, local: true do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
